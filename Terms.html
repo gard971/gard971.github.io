@@ -19,22 +19,25 @@
 
 <form>
 
-        <input type="submit" name="agree" value="agree" onclick="agree(this.form)">
-<input type="submit" name="disagree" value="Decline and go to google" onclick="disagree(this.form)">
+        <input type="submit" name="agree" value="agree" onclick="fagree()">
+<input type="submit" name="disagree" value="Decline and go to google" onclick="fdisagree()">
 
 </form>
 
-<script>
+<script type="text/javascript">
        
-       function agree(form){
+function fagree(){
 localStorage.setItem("Terms", "true")
-widow.location.href="index.html"
+window.location.href = "index.html"
+
 
 }
 
 
-        function disagree(form){
-window.location.href="https://www.google.com"
+
+        function fdisagree(){
+window.location.href="https://www.google.com/"
+return false;
 
 
 }
