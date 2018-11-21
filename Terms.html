@@ -1,0 +1,44 @@
+
+<head>
+
+
+<h1>Terms Of Service</h1>
+
+
+</head>
+
+
+<body>
+
+<article>
+ <p>1 You are not to abuse any bugs and doing so may result in a permanent removal of the site.</p>
+ <p>2 You are to retport any found bugs to the following email: Gardsoreng@gmail.com . </p>
+ <p>3 The terms of service may be changed at any time and by pressing "agree" below you agree to all the Terms Of Service.</p>
+ <p>4 Braking any of the rules above may result in but is not limited to: A permanent removal from the site.</p>
+</article>
+
+<form>
+
+        <input type="submit" name="agree" value="agree" onclick="agree(this.form)">
+<input type="submit" name="disagree" value="Decline and go to google" onclick="disagree(this.form)">
+
+</form>
+
+<script>
+       
+       function agree(form){
+localStorage.setItem("Terms", "true")
+widow.location.href="index.html"
+
+}
+
+
+        function disagree(form){
+window.location.href="https://www.google.com"
+
+
+}
+
+</script>
+</body>
+
