@@ -8,7 +8,7 @@ function enter2(){
 
   	window.location.href="Terms.html"
   }
-   else if(Terms2 = "true"){
+   else if(Terms2 == "true"){
 
    }
    
