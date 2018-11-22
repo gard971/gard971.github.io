@@ -1,12 +1,9 @@
-function agree(){
+
+function fagree(){
+window.location.assign("index.html")
 localStorage.setItem("Terms", "true")
-widow.location.href="index.html"
-
 }
-
-
-function disagree(){
-window.location.href="https://www.google.com"
-
+function fdisagree(){
+window.location.href="https://www.google.com/"
 
 }

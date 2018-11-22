@@ -2,14 +2,16 @@
 <head>
 
 
-<h1>Terms Of Service</h1>
+<h1>Terms</h1>
 
+
+<script src="Terms.js"></script>
 
 </head>
 
 
 <body>
-
+<div id="d1">
 <article>
  <p>1 You are not to abuse any bugs and doing so may result in a permanent removal of the site.</p>
  <p>2 You are to retport any found bugs to the following email: Gardsoreng@gmail.com . </p>
@@ -19,30 +21,42 @@
 
 <form>
 
-        <input type="submit" name="agree" value="agree" onclick="fagree()">
-<input type="submit" name="disagree" value="Decline and go to google" onclick="fdisagree()">
+        <input type="button" name="agree" value="Agree" onclick="fagree()">
+<input type="button" name="disagree" value="Decline and go to google" onclick="fdisagree()">
 
 </form>
 
-<script type="text/javascript">
-       
-function fagree(){
-window.location.href = "index.html"
-localStorage.setItem("Terms", "true")
-
-
-
-}
-
-
-
-        function fdisagree(){
-window.location.href="https://www.google.com/"
-return false;
-
-
-}
-
-</script>
+</div>
 </body>
+
+<style type="text/css">
+	
+  article{
+
+   text-align: center;
+
+  }
+h1{
+   text-align: center;
+
+}
+form{
+	text-align: center;
+}
+body{
+
+
+}
+
+#d1{
+
+	background-color: black;
+	color: white;
+	border:10px solid pink;
+}
+</style>
+
+
+
+
 
