@@ -5,7 +5,7 @@ var pass = localStorage.getItem("password")
 	enter4();
 	function enter4(){
 		if(pass == "true"){
-		winow.location.href="admin.html"
+		window.location.href="admin.html"
 		
 		}
 		
