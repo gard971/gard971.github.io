@@ -92,4 +92,18 @@ text-align: center;
 	border.color: black;
 }
 
+#submit{
+
+	width: 200px;
+	height: 200px
+	background:transparent;
+	background-color:pink;
+	border-width: 5px ;
+	border-top: none;
+	border.color: black;
+}
+
+
+
+
 
