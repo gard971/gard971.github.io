@@ -1,3 +1,11 @@
+function logout(){
+localStorage.removeItem("password")
+
+}
+
+
+
+
 (function() {
 
 
