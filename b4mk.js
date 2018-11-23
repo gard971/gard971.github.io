@@ -1,6 +1,21 @@
 
       
 (function(){
+var pass = localStorage.getItem("password")
+	enter4();
+	function enter4(){
+	
+	
+	}
+
+
+}
+)();
+
+
+
+
+(function(){
 
 enter3();
 function enter3(){
