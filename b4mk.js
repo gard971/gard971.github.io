@@ -60,7 +60,7 @@ window.location.href="index.html"
 
     enter(); 
 		function enter(){
-    localStorage.removeItem("password")
+    
     if(localStorage.getItem("hack") == undefined){
 
       localStorage.setItem("hack", "0")
