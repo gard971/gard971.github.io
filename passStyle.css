@@ -91,3 +91,14 @@ text-align: center;
 	border-top: none;
 	border.color: black;
 }
+
+#submit2{
+width: 200px;
+	height: 100px
+	background:transparent;
+	background-color:pink;
+	border-width: 5px ;
+	border-top: none;
+	border.color: black;
+
+}
