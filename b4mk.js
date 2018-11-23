@@ -9,7 +9,7 @@ var pass = localStorage.getItem("password")
 		
 		}
 		
-		else{]
+		else{}
 	
 	
 	}
