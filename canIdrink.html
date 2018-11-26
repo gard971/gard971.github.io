@@ -1,5 +1,5 @@
 <head>
- <h1>Can you drink?</h1>
+ <h1>Can you drink alcohol?</h1>
 <script type="text/javascript">
 function check(form){
    if(form.mening.value == "USA"){
@@ -8,6 +8,8 @@ function check(form){
 else if(form.mening.value == "NOR"){
    NOR(form);
 }
+	else if(form.mening.value == "DEN"){
+   DEN(form);
 else{
    alert("pls select country")
 }
@@ -15,19 +17,28 @@ else{
 
 function USA(form){	
     if(form.age.value >=  "21"){
-    alert("you can drink")
+    alert("you can drink alcohol")
 }
  else{
-    alert("You can not drink")
+    alert("You can not drink alcohol")
  
  }
 }
 function NOR(form){	
    if(form.age.value >=  "18"){
-   alert("you can drink")
+   alert("you can drink alcohol")
 }
  else{
-    alert("You can not drink")
+    alert("You can not drink alcohol")
+ 
+ }
+}
+	function DEN(form){	
+   if(form.age.value >=  "16"){
+   alert("you can drink alcohol")
+}
+ else{
+    alert("You can not drink alcohol")
  
  }
 }
@@ -43,7 +54,8 @@ function NOR(form){
 	<select name="mening">
 		<option value="DSH"Disabled selected hidden>Please select country</option>
 		<option value="USA">USA</option>
-  <option value="NOR">Norway</option>
+		<option value="USA">Denmark</option
+                <option value="NOR">Norway</option>
 
 
 
