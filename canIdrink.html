@@ -1,6 +1,6 @@
 <head>
 <script>
-  function check(){
+  function check(form){
 var age = form.age.value
 
 var age2 = (age => 18) ? "You can drink": "You can not drink"
@@ -15,7 +15,7 @@ var age2 = (age => 18) ? "You can drink": "You can not drink"
 
 <form>
 <input type="text" placeholder="Your age" name="age">
-<input type="button" value="Check" onclick="check()"
+<input type="button" value="Check" onclick="check(this.form)"
 
 </form>
 </body>
