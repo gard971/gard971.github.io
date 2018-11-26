@@ -1,12 +1,13 @@
 <head>
 <script>
-  function check(form){
-var age1 = form.age.value
-
-var age2 = (age1 => 18) ? "You can drink": "You can not drink"
-  
-  alert(age2)
-
+function check(form){
+if(form.age.value => 18){
+ alert("you can drink")
+}
+ else{
+ alert("You can not drink")
+ 
+ }
 }
   </script>
 <h1>Drinking calculator</h1>
