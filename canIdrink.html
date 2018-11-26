@@ -3,15 +3,36 @@
 <script type="text/javascript">
 function check(form){
 if(form.mening.value == "USA"){
-alert("u selected usa")
+USA();
 }
 else if(form.mening.value == "NOR"){
-alert("u selected Norway")
+NOR();
 }
 else{
 alert("pls select country")
 }
 }
+
+function USA(){	
+if(form.age.value >=  "21"){
+ alert("you can drink")
+}
+ else{
+ alert("You can not drink")
+ 
+ }
+}
+	function NOR(){	
+if(form.age.value >=  "18"){
+ alert("you can drink")
+}
+ else{
+ alert("You can not drink")
+ 
+ }
+}
+	
+	
 
   </script>
 
