@@ -1,0 +1,27 @@
+<head>
+<script src=canIdrink.js"></script>
+<h1>Drinking calculator</h1>
+</head>
+<body>
+
+<form>
+<input type="text" placeholder="Your age" name="age">
+<input type="button" value="Check" onclick="check()"
+
+</form>
+</body>
+
+<style>
+
+head{
+text-align:center;
+color:white;
+background-color:black;
+}
+
+body{
+text-align:center;
+background-color: brown;
+
+}
+
