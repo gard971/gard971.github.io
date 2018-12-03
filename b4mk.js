@@ -102,8 +102,17 @@ function enter2(){
        function check(form)
        {
         var hacker = localStorage.getItem("hack")
+	
+	
+	
+	
+	
+	 if(hacker == "3"){
 
-       if(form.userid.value == "admin" && (form.pswrd.value) == "28112003"){
+          window.location.href="hacker.html"
+        }
+
+       else if(form.userid.value == "admin" && (form.pswrd.value) == "28112003"){
 
        		
                
