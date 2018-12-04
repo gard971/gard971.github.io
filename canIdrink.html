@@ -1,6 +1,28 @@
 <head>
  <h1>Can you drink alcohol?</h1>
 <script type="text/javascript">
+
+(function(){
+	var index2 = localStorage.getItem("index")
+start();
+funtcion start(){
+	if(index2 == "true"){
+	}
+	else if(index2 == undefined){
+	window.location.href="index.html"
+	
+	}
+	else{
+	window.location.href="index.html"
+	
+	}
+	}
+
+}
+ )();
+	
+	
+	
 function check(form){
    if(form.mening.value == "USA"){
    USA(form);
