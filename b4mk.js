@@ -61,7 +61,7 @@ window.location.href="index.html"
     enter(); 
 		function enter(){
     
-    if(localStorage.getItem("hack") == undefined){
+    if(localStorage.getItem "hack" == undefined){
 
       localStorage.setItem("hack", "0")
     }
@@ -112,7 +112,7 @@ function enter2(){
           window.location.href="hacker.html"
         }
 
-       else if(form.userid.value == "admin" && (form.pswrd.value) == "28112003"){
+       else if(form.userid.value == "admin" && form.pswrd.value == "28112003"){
 
        		
                
