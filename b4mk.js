@@ -120,10 +120,7 @@ function enter2(){
 
        	}
 
-        else if(hacker == "3"){
-
-          window.location.href="hacker.html"
-        }
+       
 
        	else{
 
