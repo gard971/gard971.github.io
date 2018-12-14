@@ -1,34 +1,115 @@
+<form id="form">
+    <label id="label">Please Log In</label><br>
+    <input id="i1" type="text" name="userid" placeholder="Username"><br>
+    <input id="i2" type="password" name="pswrd" placeholder="Password"><br>
+    <input id="b1" type="button" onclick="check(this.form)" value="Log In"><br>
+        <a id="a1"href="register.html">Don't have an account? Register here.</a>
 
-<script src="b4mk.js"></script>
-<link rel="stylesheet" type="text/css" href="passStyle.css">
-<title id="t1">Dev console</title>
-<meta charset="UTF-8">
-
-
-
-
-<body id="b1">
-	
+    
+</form>
 
 
+<script src="">
+</script>
+<style>
+    #button{
+    position:relative;
+    right:-60px;    
+    }
+   
+    #f1{
+    position:fixed;
+    right:10px;
+    top:150px;
+    border-style:solid;
+    border-width:10px;
+    border-color:black;
+    background-color:grey;
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-left:20px;
+    padding-right:20px;
+    
+    }
+    #form{
+    text-align:center;
+    position:fixed;
+    top:100px;
+    right:450px;
+    background:transparent;
+    border-style:solid;
+    border-width:20px;
+    border-color:black;
+    background-color:grey;
+    padding:100px;
+    }
+    body{
+    background-color:red;
+    }
+    #i1{
+    background:transparent;
+    border-width:5px;
+    border-color:black;
+    }
+    #i2{
+    background:transparent;
+    border-width:5px;
+    border-color:black;
+    border-top:none;
+        
+    }
+    ::placeholder{
+    color:black;
+       
+    }
+    #label{
+    font-size:40px;
+    }
+    #i3{
+    background:transparent;
+    border-width:5px;
+    border-color:black;
+    
+    }
+     #i4{
+    background:transparent;
+    border-width:5px;
+    border-color:black;
+    border-top:none;
+    }
+    a{
+    color:black;
+    text-decoration: none;
+       
+    
+    }
+    a:hover{
+    color:white;
+        text-decoration: none;
 
-
-
-</body>
-
-<header id="form1">
-<form name="login" id="f1">
-	<label id="label">Admin login</label>
-	<br>
-
-	<input type="text" name="userid" placeholder="Username" id="username"><br>
-	<input type="password" placeholder="Password" name="pswrd" id="password"><br>
-	<input type="button" onclick="check(this.form)" value="login" id="submit"> 
-
-	</form>
-	<form method="get" action="index.html">
-		<input type="submit" value="Go back to home" id="submit2">
-		
-	</form>
-</header>
-
+    }
+    #b1{
+    background:transparent;
+    border:none;
+    border-style:solid;
+    border-width:3px;
+    border-color:black;
+    position:relative;
+    top:5px;
+    
+    }
+    #b1:hover{
+    color:pink;
+    border-color:pink;
+    }
+    ::placeholder{
+    color:black;
+    text-align:center;    
+    }
+    #a1{
+    position:relative;
+    top:20px;    
+    }
+    
+        
+</style>
