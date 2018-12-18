@@ -1,61 +1,157 @@
-<title>HUB</title>
-<script src="index.js"></script>
+ 
 <head>
-<h1>Where do you want to go?</h1>
+<title>Home</title>
 
+  <ul>
+      <li onclick="pass()"><a href="pass.html" id="a1">Change Log   </a></li>
+      <li onclick="drink()"><a id="a2" href="CanIdrink.html">Where Can You Drink?   </a></li>
+      <li onclick="john()"><a id="a3" href="John.html">John Wick Needs Your Help   </a></li>
+      <li onclick="vbuck()"><a id="a4" href="vbucks.html">GET FREE VBUCKS NOW!!   </a></li>
+    </ul>
+    </head>
+    <body style="width:100%;">
+    <div id="d1">
+        <h1>About</h1>
+        <p id="p1">Hello! My name is Gard and i am the developer of this website.<br>
+         I made this website and continue to develop this website <br>just because of
+        my passion for programing. I run this project only on my freetime.</p>
+    </div>
+    <div id="d2">
+    	<h1>Contact</h1>
+    	<p id="p1">You can contact me at my email:<a id="Email" href="mailto:gardsoreng@gmail.com" target="_blank">Garsoreng@gmail.com</a>.<br> If you find any bugs or have any suggestions please contact me.</p>
+    </div>
+    <div id="d3">
+    	<h1>Code</h1>
+    	<p id="p1">If you are interested in the code you can find all the code for the different sites<a id="Email" href="https://github.com/gard971/gard971.github.io" target="_blank"> here</a> or by pressing CTRL+U on the individual sites</p>
 
-
-
-
-</head>
-
-<body>
-  
-  <form method="get" action="canIdrink.html">
-<input type="submit" value="What countries can you drink alcohol in?">
-  </form>
-
-
-<form method="get" action="John.html">
-<input type="submit" value="JOHN WICK NEEDS YOUR HELP!!!!!">
-
-
-</form>
-<form method="get" action="vbucks.html">
-<input type="submit" value="Get free vbucks here!!">
-
-
-</form>
-    </form>
-
-<form method="get" action="pass.html">
-<input type="submit" value="Admin console">
-
-
-</form>
 
 </body>
+<script type="text/javascript">
+	function pass(){
+		window.location.href="pass.html"
+	}
+	function drink(){
+		window.location.href="CanIdrink.html"
+	}
+	function john() {
+		window.location.href="John.html"
+		// body...
+	}
+	function vbuck(){
+		window.location.href="vbucks.html"
+	}
 
+</script>
+
+    
 
 <style>
+    a{
+      
+      text-decoration:none;
+      color:black;
+      position:relative;
+      top:80%;  
+      
+      
+      
+      
+      
+    }
+    
+    
+ 
+    body{
+    margin:0px;
+    background-size:200000px;
+    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/vfPFP3W/computer-coding-javascript-and-html-for-the-web-in-closeup-loop_b8vj5vu3_thumbnail-full01.png") no-repeat ;    
+    }
+    
+    ul{
+    list-style:none;
+    position:fixed;
+    float: left;
+    text-align:center;
+    width:100%; 
+    margin:0px;
+    padding:0%;
+    top:10%;
 
-body{
-text-align: center;
-background-color:brown;
+     
+   
+    }
+    li{
+    float:left;
+    border-style:solid;'
+    border-width:5px;
+    border-color:black;
+    width:25%;
+    background-color:white;
+    border-right:none;
+    border-left:none;
+    margin:none;
+    display:inline;
+    height:30px;
+    padding-bottom: 2%;
+   
+    }
+    li:hover{
+    color:white;
+    border-color:white;
+    }
+    
+    #d1{
+    position:fixed;
+    top:70%;
+    background-color:black;
+    padding-right:3%;
+    padding-bottom:200%;
+    border-style:solid;
+    border-color:yellow;
+    border-width:5px;
+    color:white;
+    text-align:center;
 
-}
+    
+    }
+    
+    #p1{
+    	margin:5%;
 
-h1{
 
+    }
 
-color:white;
-padding:20px;
+    #Email{
 
-}
+    	color:blue;
+    	position:relative;
+    	top:30%;
+    }
 
+    #d2{
+
+    	background-color:black;
+    	position:fixed;
+    	top:70%;
+    	left:38%;
+    	color:white;
+    	border-style: solid;
+    	border-width: 5px;
+    	border-color:yellow;
+    	text-align: center;
+    	padding-bottom: 50%
+
+    }
+    #d3{
+    	text-align: center;
+    	position: fixed;
+    	top: 70%;
+    	left:70%;
+    	color:white;
+    	border-style: solid;
+    	border-width: 5px;
+    	border-color: yellow;
+    	background-color: black;
+    	padding-bottom: 50%;
+    }
 </style>
-
-
-
-
-
