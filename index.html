@@ -40,6 +40,28 @@
 	function vbuck(){
 		window.location.href="vbucks.html"
 	}
+    
+    (function(){
+        mobile();
+        function mobile(){
+        if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) 
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)){
+alert("Sorry! This site is not compatible with mobile. The dev team are curently working on a mobile compatible site.")
+ window.location.href="https://www.google.com/"
+            
+            
+            
+        }
+            else{
+   
+            }
+        
+    }
+    }
+        )();
 
 </script>
 
@@ -112,6 +134,7 @@
     color:white;
     text-align:center;
     font-size:100%;
+    overflow:auto;    
 
     
     }
