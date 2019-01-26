@@ -73,11 +73,9 @@
 		var tall1 = sessionStorage.getItem("var1")
 		var method = sessionStorage.getItem("method")
 		var tall2 = form.input.value
-		if(tall1 == undefined || method == undefined || tall2 == ""){
-			alert("Somthing went wrong. Please refresh the page and try again")
-		}
+	
 
-	  else if(method == "pluss"){
+	   if(method == "pluss"){
 		   var tall2 = form.input.value
 		   sessionStorage.removeItem("method")
 		   sessionStorage.removeItem("var1")
@@ -115,6 +113,10 @@
 		alert(svar)
 		document.getElementById("f1").reset();
 		}
+		else{
+			alert("Somthing went wrong. Please refresh the page and try again")
+		}
+
 		
 	}
 	
