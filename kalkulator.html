@@ -1,0 +1,147 @@
+
+<h1 id="h1">Kalkulator</h1>
+<form id="f1">
+	<input type="number" name="input">
+	<div id="c1">
+	<input type="button" value="+" onclick="pluss(this.form)">
+	<input type="button" value="-" onclick="minus(this.form)">
+	<input type="button" value="x" onclick="gang(this.form)">
+	<input type="button" value="÷" onclick="dele(this.form)">
+	<input type="button" value="=" onclick="regn(this.form)">
+	</div>
+</form>
+
+<title>Kalkulator</title>
+<p>Made By Gard :)</p>
+
+<script>
+	
+
+	function dele(form){
+   
+		if(form.input.value == ""){
+			alert("Please input your first value")
+		}
+		else{
+		sessionStorage.setItem("var1", form.input.value)
+		sessionStorage.setItem("method", "dele")
+		document.getElementById("f1").reset();
+	}
+	}
+	
+	
+	
+	function minus(form){
+		if(form.input.value == ""){
+			alert("Please put in your first value")
+		}
+		else{
+	sessionStorage.setItem("var1", form.input.value)
+	sessionStorage.setItem("method", "minus")
+	document.getElementById("f1").reset();
+}
+		
+	}
+	function gang(form){
+		if(form.input.value == ""){
+			alert("Please input your first value")
+		}
+		else{
+		sessionStorage.setItem("var1", form.input.value)
+		sessionStorage.setItem("method", "gange")
+		document.getElementById("f1").reset();
+	}
+	}  
+	
+	
+	
+	function pluss(form){
+		if(form.input.value == ""){
+			alert("Please input your first value")
+		}
+		else{
+		
+		sessionStorage.setItem("var1" , form.input.value)
+		sessionStorage.setItem("method", "pluss")
+		document.getElementById("f1").reset();
+	}
+		
+	   
+	
+	}
+	function regn(form){
+		var tall1 = sessionStorage.getItem("var1")
+		var method = sessionStorage.getItem("method")
+		var tall2 = form.input.value
+		if(tall1 == undefined || method == undefined || tall2 == ""){
+			alert("Somthing went wrong. Please refresh the page and try again")
+		}
+
+	  else if(method == "pluss"){
+		   var tall2 = form.input.value
+		   sessionStorage.removeItem("method")
+		   sessionStorage.removeItem("var1")
+		   var svar = +tall1 + +tall2
+		   alert(svar)
+		   document.getElementById("f1").reset();
+		   
+		 
+	
+	}
+		else if(method == "gange"){
+		var tall2 = form.input.value
+		sessionStorage.removeItem("method")
+		sessionStorage.removeItem("var1")
+		var svar = +tall1 * +tall2
+		alert(svar)
+		document.getElementById("f1").reset();
+		
+		}
+		
+		else if(method == "minus"){
+		var tall2 = form.input.value
+		sessionStorage.removeItem("method")
+		sessionStorage.removeItem("var1")
+		var svar = tall1 - tall2
+		alert(svar)
+		document.getElementById("f1").reset();
+		}
+		
+		else if(method == "dele"){
+		var tall2 = form.input.value
+		sessionStorage.removeItem("method")
+		sessionStorage.removeItem("var1")
+		var svar = tall1 / tall2
+		alert(svar)
+		document.getElementById("f1").reset();
+		}
+		
+	}
+	
+	 
+	
+</script>
+
+
+<style>
+#f1{
+	position: absolute;
+	top:30%;
+	right: 50%;
+}
+#c1{
+	position: relative;
+	top:50%;
+	left:10%;
+}
+#h1{
+	position: absolute;
+	top:20%;
+	left:42%;
+}
+body{
+	background-color:black;
+	color:white;
+}
+
+</style>
