@@ -1,21 +1,92 @@
 
 <h1 id="h1">Kalkulator</h1>
 <form id="f1">
-	<input type="number" name="input">
+	<input type="text" name="input">
 	<div id="c1">
 	<input type="button" value="+" onclick="pluss(this.form)">
 	<input type="button" value="-" onclick="minus(this.form)">
 	<input type="button" value="x" onclick="gang(this.form)">
 	<input type="button" value="÷" onclick="dele(this.form)">
 	<input type="button" value="=" onclick="regn(this.form)">
-	</div>
+	<input name="1" type="button" value="1" onclick="en(this.form)">
+	<input name="2" type="button" value="2" onclick="to(this.form)">
+	<input name="3" type="button" value="3" onclick="tre(this.form)">
+	<input name="4" type="button" value="4" onclick="fire(this.form)">
+	<input name="5" type="button" value="5" onclick="fem(this.form)">
+	<input name="6" type="button" value="6" onclick="seks(this.form)">
+	<input name="7" type="button" value="7" onclick="syv(this.form)">
+	<input name="8" type="button" value="8" onclick="åtte(this.form)">
+	<input name="9" type="button" value="9" onclick="ni(this.form)">
+	<input value="C" type="button" onclick="C(this.form)">
+    </div>
+	
+
+	
 </form>
 
 <title>Kalkulator</title>
 <p>Made By Gard :)</p>
 
 <script>
+	                 function C(form){
+    	document.getElementById("f1").reset();
+    	sessionStorage.removeItem("var1")
+    	sessionStorage.removeItem("method")
+    }
+
+
+
+	                function ni(form){
+    	form.input.value = form.input.value + "9"
+    }
+
+
+
+	              function åtte(form){
+    	form.input.value = form.input.value + "8"
+    }
+
+	            
+
+	            function syv(form){
+    	form.input.value = form.input.value + "7"
+    }
+
+
+
+
+
+	          function seks(form){
+    	form.input.value = form.input.value + "6"
+    }
+
+
+
+	        function fem(form){
+    	form.input.value = form.input.value + "5"
+    }
+
+
+	      function fire(form){
+    	form.input.value = form.input.value + "4"
+    }
+
+
+
+	    function tre(form){
+    	form.input.value = form.input.value + "3"
+    }
+
+
+	  function to(form){
+    	form.input.value = form.input.value + "2"
+    }
 	
+    function en(form){
+    	form.input.value = form.input.value + "1"
+    }
+	
+ 
 
 	function dele(form){
    
@@ -26,6 +97,7 @@
 		sessionStorage.setItem("var1", form.input.value)
 		sessionStorage.setItem("method", "dele")
 		document.getElementById("f1").reset();
+
 	}
 	}
 	
@@ -80,8 +152,7 @@
 		   sessionStorage.removeItem("method")
 		   sessionStorage.removeItem("var1")
 		   var svar = +tall1 + +tall2
-		   alert(svar)
-		   document.getElementById("f1").reset();
+		   form.input.value = "="+svar
 		   
 		 
 	
@@ -91,8 +162,7 @@
 		sessionStorage.removeItem("method")
 		sessionStorage.removeItem("var1")
 		var svar = +tall1 * +tall2
-		alert(svar)
-		document.getElementById("f1").reset();
+		form.input.value = "="+svar
 		
 		}
 		
@@ -101,8 +171,7 @@
 		sessionStorage.removeItem("method")
 		sessionStorage.removeItem("var1")
 		var svar = tall1 - tall2
-		alert(svar)
-		document.getElementById("f1").reset();
+		form.input.value = "="+svar
 		}
 		
 		else if(method == "dele"){
@@ -110,8 +179,8 @@
 		sessionStorage.removeItem("method")
 		sessionStorage.removeItem("var1")
 		var svar = tall1 / tall2
-		alert(svar)
-		document.getElementById("f1").reset();
+		form.input.value = "="+svar
+		
 		}
 		else{
 			alert("Somthing went wrong. Please refresh the page and try again")
@@ -126,14 +195,15 @@
 
 
 <style>
+
 #f1{
 	position: absolute;
 	top:30%;
 	right: 50%;
 }
 #c1{
-	position: relative;
-	top:50%;
+	position: absolute;
+	top:100%;
 	left:10%;
 }
 #h1{
