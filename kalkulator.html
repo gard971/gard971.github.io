@@ -8,6 +8,7 @@
 	<input type="button" value="x" onclick="gang(this.form)">
 	<input type="button" value="÷" onclick="dele(this.form)">
 	<input type="button" value="=" onclick="regn(this.form)">
+	<input type="button" value="0" onclick="nul(this.form)">
 	<input name="1" type="button" value="1" onclick="en(this.form)">
 	<input name="2" type="button" value="2" onclick="to(this.form)">
 	<input name="3" type="button" value="3" onclick="tre(this.form)">
@@ -28,6 +29,12 @@
 <p>Made By Gard :)</p>
 
 <script>
+	                 function nul(form){
+	                 	form.input.value= form.input.value + "0"
+	                 }
+
+
+
 	                 function C(form){
     	document.getElementById("f1").reset();
     	sessionStorage.removeItem("var1")
