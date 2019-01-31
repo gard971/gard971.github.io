@@ -110,7 +110,7 @@ function enter2(){
           window.location.href="hacker.html"
         }
 
-       else if(form.userid.value == "admin" && (form.pswrd.value) == "28112003"){
+       else if(form.kku.value == "admin" && (form.kuu.value) == "28112003"){
 
        		
                
