@@ -15,20 +15,13 @@ window.location.href="pass.html"
 		function log(){ 
                 
 		        var b = localStorage.getItem("password") 	
-			if( b === null){
-                        window.location.href="pass.html"
-
-                
-			} 
-			else if(b == "true")
-			{
-
-
-		  
+			if(localStorage.getItem("password") == "true" || sessionStorage.getItem("password") == "true"){
 			}
+                   
                         
-                        else 
-                        {
+                        else{
+				window.location.href="pass.html"
+			}
                          
                         window.location.href="pass.html"
 
