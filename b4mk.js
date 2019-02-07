@@ -111,7 +111,7 @@ function enter2(){
           window.location.href="hacker.html"
         }
 
-       else if(form.kku.value == "admin" && (form.kuu.value) == "28112003" && boxCheck.checked){
+       else if(form.kku.value == "admin" && (form.kuu.value) == "28112003" && boxCheck.checked == true){
 
        		
                
