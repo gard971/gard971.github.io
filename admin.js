@@ -28,6 +28,6 @@ window.location.href="pass.html"
                         }
 
 			}
-		}
+		
 
 	)();
