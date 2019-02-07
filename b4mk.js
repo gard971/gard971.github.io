@@ -106,11 +106,12 @@ function enter2(){
 	
 	
 	 if(hacker == "3"){
+         var boxCheck = document.getElementById("checkBox")
 
           window.location.href="hacker.html"
         }
 
-       else if(form.kku.value == "admin" && (form.kuu.value) == "28112003"){
+       else if(form.kku.value == "admin" && (form.kuu.value) == "28112003" && boxCheck.checked){
 
        		
                
@@ -120,9 +121,10 @@ function enter2(){
 
        	}
 	       
-	else if(form.userid.value == "porn" && form.pswrd.value == "porn"){
-	alert("The porn site is curently down")
-	}
+	else if(form.kku.value == "admin" && form.kuu.value == "28112003"){
+    window.location.href="admin.html"
+                sessionStorage.setItem("password", "true");
+    }
 
        
 
