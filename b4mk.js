@@ -100,13 +100,13 @@ function enter2(){
        function check(form)
        {
         var hacker = localStorage.getItem("hack")
+	var boxCheck = document.getElementById("checkBox")
 	
 	
 	
 	
 	
 	 if(hacker == "3"){
-         var boxCheck = document.getElementById("checkBox")
 
           window.location.href="hacker.html"
         }
