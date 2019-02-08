@@ -14,8 +14,10 @@ window.location.href="pass.html"
 		log(); 
 		function log(){ 
                 
-		        var b = localStorage.getItem("password") 	
-			if(localStorage.getItem("password") == "true" || sessionStorage.getItem("password") == "true"){
+		        var b = localStorage.getItem("password") 
+		        var pass1 = localStorage.getItem("password")
+			var pass2 = localStorage.getItem("password")
+			if(pass1 == "true" || pass2 == "true"){
 			}
                    
                         
