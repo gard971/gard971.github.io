@@ -1,5 +1,6 @@
 function logout(){
 localStorage.removeItem("password")
+sessionStorage.removeItem("password")
 window.location.href="pass.html"
 
 }
