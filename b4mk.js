@@ -130,7 +130,7 @@ function enter2(){
        	else{
 
             localStorage.setItem('hack',parseInt(localStorage.getItem('hack'))+1);
-        		document.getElementById("WP").innerHTML = "Wrong username or password"
+        		document.getElementById("WP").innerHTML = "Wrong username or password!"
        	} 
 
 
