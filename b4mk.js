@@ -97,11 +97,10 @@ function enter2(){
   )();
 
 		
-       function check(form)
-       {
+       function check(form){
         var hacker = localStorage.getItem("hack")
 	var boxCheck = document.getElementById("checkBox")
-	
+    
 	
 	
 	
@@ -131,11 +130,10 @@ function enter2(){
        	else{
 
             localStorage.setItem('hack',parseInt(localStorage.getItem('hack'))+1);
-        		alert("Wrong password/username")
+        		document.getElementById("WP").innerHTML = "Wrong username or password"
        	} 
 
 
 
        }
-       
        
