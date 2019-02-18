@@ -1,0 +1,23 @@
+<body onload="enter()">
+<link rel="stylesheet" type="text/css" href="docs.css">
+<form>
+<textarea id="mainText" name="mainText"></textarea>
+<button  onclick="save(this.form)">save
+</button>
+<input type="button" onclick="load(this.form)" value="Load Save">
+</form>
+</body>
+<script>
+
+		
+	function enter(){
+		document.getElementById("mainText").value = localStorage.getItem("savedItem3")
+	}
+	
+	function save(form){
+	localStorage.setItem("savedItem3", form.mainText.value)
+}
+function load(form){
+	form.mainText.value = localStorage.getItem("savedItem3")
+}
+</script>
