@@ -1,15 +1,67 @@
-<image id="p" src="project1.png" onclick="location.href='docs.html'">
-<image src="project2.png" id="p" onclick="location.href='docs2.html'">
-<image src="project3.png" id="p" onclick="location.href='docs3.html'">
-<image src="project4.png" id="p" onclick="location.href='docs4.html'">
+<image id="p1" src="project1.png" onclick="location.href='docs.html'">
+<image src="project2.png" id="p2" onclick="location.href='docs2.html'">
+<image src="project3.png" id="p3" onclick="location.href='docs3.html'">
+<image src="project4.png" id="p4" onclick="location.href='docs4.html'">
+<image src="addbtn.png" id="addbtn" onclick="add()">
 
+<script>
+	enter();
+	function enter(){
+		if(localStorage.getItem("remove4") == "true"){
+			var elem = document.getElementById("p4")
+			document.body.removeChild(elem)
+		}
+
+		
+	}
+	ex();
+    function ex(){
+    	if(localStorage.getItem("exc4") == undefined){
+    		var elem = document.getElementById("p4")
+    		document.body.removeChild(elem)
+
+    	}
+    	if(localStorage.getItem("exc3") == undefined){
+    		var elem = document.getElementById("p3")
+    		document.body.removeChild(elem)
+    	}
+    	if(localStorage.getItem("exc2") == undefined){
+    		var elem = document.getElementById("p2")
+    		document.body.removeChild(elem)
+        }
+    }
+	function add(){
+	   if(localStorage.getItem("exc2") == undefined){
+	   	localStorage.setItem("exc2", "true")
+	   	window.location.href="index.html"
+	   }
+	   else if(localStorage.getItem("exc3") == undefined){
+	   	localStorage.setItem("exc3", "true")
+	   	window.location.href="index.html"
+	   }
+	   else if(localStorage.getItem("exc4") == undefined){
+	   	localStorage.setItem("exc4","true")
+	   	window.location.href="index.html"
+	   }
+	   else{
+	   	alert("Sorry! You have reached you max limit :(")
+	   }
+	}
+
+</script>
 
 <style>
 body{
 	background-color:grey;
 }
+#addbtn{
+	width:5%;
+}
+#addbtn:hover{
+	width:6%;
+}
 
-#p:hover{
+#p1:hover{
    border-style:solid;
    border-color:black;
    border-width:1%;
@@ -17,7 +69,41 @@ body{
 
 
 }
-#p{
+#p1{
 	margin:0.1%;
 }
+#p2:hover{
+   border-style:solid;
+   border-color:black;
+   border-width:1%;
+
+
+
+}
+#p2{
+	margin:0.1%;
+}
+#p3:hover{
+   border-style:solid;
+   border-color:black;
+   border-width:1%;
+
+
+
+}
+#p3{
+	margin:0.1%;
+}
+#p4:hover{
+   border-style:solid;
+   border-color:black;
+   border-width:1%;
+
+
+
+}
+#p4{
+	margin:0.1%;
+}
+
 </style>

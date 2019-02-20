@@ -5,19 +5,35 @@
 <textarea id="mainText"  name="mainText"></textarea>
 <button  onclick="save(this.form)">save
 </button>
-<input type="button" onclick="load(this.form)" value="Load Save">
+<input type="button" onclick="del()" value="Delete document">
 </form>
-	<style>
-		
+<style>
 #mainText{
 	height: 98%;
 	width: 100%;
 	resize: none;
 }
-	</style>
+</style>
 </body>
 <script>
+	
+
+
+	function del(){
+	if(confirm("Are you sure you want to delete?")){
+		localStorage.removeItem("savedItem2")
+		localStorage.removeItem("exc2")
+		window.location.href="index.html"
+	}	
+	}
+	    		
+
+
 	    		function enter(form){
+	    	
+		if(localStorage.getItem("exc2") == undefined){
+			window.location.href="index.html"
+		}
 		document.getElementById("mainText").value = localStorage.getItem("savedItem2")
 	}
 	
