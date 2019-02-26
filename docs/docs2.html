@@ -2,8 +2,8 @@
 
 <link rel="stylesheet" type="text/css" href="docs.css">
 <form>
-    <button  onclick="save(this.form)">save
-</button>
+    <input type="button"  onclick="save(this.form)"value="save">
+
 <input type="button" onclick="del()" value="Delete document">
 <textarea id="mainText"  name="mainText"></textarea>
 </form>
@@ -16,7 +16,13 @@
 </style>
 </body>
 <script>
-	
+    
+
+window.addEventListener("beforeunload", function (e) {
+
+  (e || window.event).returnValue = null;
+
+});
 
 
 	function del(){
@@ -33,6 +39,7 @@
 	    	
 		if(localStorage.getItem("exc2") == undefined){
 			window.location.href="index.html"
+            
 		}
 		document.getElementById("mainText").value = localStorage.getItem("savedItem2")
 	}

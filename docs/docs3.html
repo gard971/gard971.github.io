@@ -15,7 +15,13 @@
 </style>
 </body>
 <script>
-	function del(){
+	window.addEventListener("beforeunload", function (e) {
+
+  (e || window.event).returnValue = null;
+
+});
+    
+    function del(){
 	if(confirm("Are you sure you want to delete?")){
 		localStorage.removeItem("savedItem3")
 		localStorage.removeItem("exc3")

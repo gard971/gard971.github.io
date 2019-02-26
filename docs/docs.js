@@ -8,3 +8,8 @@ function load(form){
 	function enter(){
 		document.getElementById("mainText").value = localStorage.getItem("savedItem")
 	}
+window.addEventListener("beforeunload", function (e) {
+
+  (e || window.event).returnValue = null;
+
+});
