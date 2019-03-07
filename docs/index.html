@@ -1,19 +1,27 @@
-<image id="p1" src="project1.png" onclick="location.href='docs.html'">
-<image src="project2.png" id="p2" onclick="location.href='docs2.html'">
-<image src="project3.png" id="p3" onclick="location.href='docs3.html'">
-<image src="project4.png" id="p4" onclick="location.href='docs4.html'">
+
+<p id="p1" onclick="location.href='docs.html'">Project 1</p>
+<p id="p2" onclick="location.href='docs2.html'">Project 2</p>
+<p id="p3" onclick="location.href='docs3.html'">Project 3</p>
+<p id="p4" onclick="location.href='docs4.html'">Project 4</p>
 <image src="addbtn.png" id="addbtn" onclick="add()">
+</image>
 
 <script>
 	enter();
 	function enter(){
-		if(localStorage.getItem("remove4") == "true"){
-			var elem = document.getElementById("p4")
-			document.body.removeChild(elem)
-		}
-
-		
+	if(localStorage.getItem("p1Name") != undefined){
+	  document.getElementById("p1").innerHTML = localStorage.getItem("p1Name")
 	}
+	if(localStorage.getItem("p2Name") != undefined){
+	  document.getElementById("p2").innerHTML = localStorage.getItem("p2Name")
+	}
+	if(localStorage.getItem("p3Name") != undefined){
+	  document.getElementById("p3").innerHTML = localStorage.getItem("p3Name")
+	}
+	if(localStorage.getItem("p4Name") != undefined){
+	  document.getElementById("p4").innerHTML = localStorage.getItem("p4Name")
+	}
+}
 	ex();
     function ex(){
     	if(localStorage.getItem("exc4") == undefined){
@@ -51,6 +59,18 @@
 </script>
 
 <style>
+p{
+   float:left;
+  
+}
+
+#p1{
+	background-color:white;
+	padding-left:5%;
+	padding-right: 3%;
+	padding-top: 15%;
+	width:5%;
+}
 body{
 	background-color:grey;
 }
@@ -70,6 +90,11 @@ body{
 
 }
 #p1{
+	background-color:white;
+	padding-left:5%;
+	padding-right: 3%;
+	padding-top: 15%;
+	width:5%;
 	margin:0.1%;
 }
 #p2:hover{
@@ -81,6 +106,11 @@ body{
 
 }
 #p2{
+	background-color:white;
+	padding-left:5%;
+	padding-right: 3%;
+	padding-top: 15%;
+	width:5%;
 	margin:0.1%;
 }
 #p3:hover{
@@ -92,6 +122,11 @@ body{
 
 }
 #p3{
+	background-color:white;
+	padding-left:5%;
+	padding-right: 3%;
+	padding-top: 15%;
+	width:5%;
 	margin:0.1%;
 }
 #p4:hover{
@@ -103,6 +138,11 @@ body{
 
 }
 #p4{
+	background-color:white;
+	padding-left:5%;
+	padding-right: 3%;
+	padding-top: 15%;
+	width:5%;
 	margin:0.1%;
 }
 

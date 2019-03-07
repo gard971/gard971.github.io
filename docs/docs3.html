@@ -1,10 +1,12 @@
 <body onload="enter()">
 <link rel="stylesheet" type="text/css" href="docs.css">
 <form>
-    <button  onclick="save(this.form)">save
+	<input id="name" type="text" placeholder="project3">
+<input value="Confirm New Name" type="button" onclick="saveName()">
+<textarea id="mainText" name="mainText"></textarea>
+<button  onclick="save(this.form)">save
 </button>
 <input type="button" onclick="del()" value="Delete Document">
-<textarea id="mainText" name="mainText"></textarea>
 </form>
 <style>
 #mainText{
@@ -15,16 +17,22 @@
 </style>
 </body>
 <script>
-	window.addEventListener("beforeunload", function (e) {
-
-  (e || window.event).returnValue = null;
-
-});
-    
-    function del(){
+	enter2();
+	function enter2(){
+		if(localStorage.getItem("p3Name") != undefined){
+			document.getElementById("name").placeholder = localStorage.getItem("p3Name")
+	}
+}
+	function saveName(){
+		localStorage.setItem("p3Name", document.getElementById("name").value)
+		document.getElementById("name").value=""
+		enter2();
+	}
+	function del(){
 	if(confirm("Are you sure you want to delete?")){
 		localStorage.removeItem("savedItem3")
 		localStorage.removeItem("exc3")
+		localStorage.removeItem("p3Name")
 		window.location.href="index.html"
 	}	
 	}

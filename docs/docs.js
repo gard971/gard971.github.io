@@ -7,9 +7,16 @@ function load(form){
        
 	function enter(){
 		document.getElementById("mainText").value = localStorage.getItem("savedItem")
+		
+		}
+	enter2();
+	function enter2(){
+		if(localStorage.getItem("p1Name") != undefined){
+			document.getElementById("name").placeholder = localStorage.getItem("p1Name")
 	}
-window.addEventListener("beforeunload", function (e) {
-
-  (e || window.event).returnValue = null;
-
-});
+}
+	function saveName(){
+		localStorage.setItem("p1Name", document.getElementById("name").value)
+		document.getElementById("name").value=""
+		enter2();
+	}

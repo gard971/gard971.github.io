@@ -2,10 +2,12 @@
 
 <link rel="stylesheet" type="text/css" href="docs.css">
 <form>
-    <input type="button"  onclick="save(this.form)"value="save">
-
-<input type="button" onclick="del()" value="Delete document">
+	<input id="name" type="text" placeholder="project2">
+<input value="Confirm New Name" type="button" onclick="saveName()">
 <textarea id="mainText"  name="mainText"></textarea>
+<button  onclick="save(this.form)">save
+</button>
+<input type="button" onclick="del()" value="Delete document">
 </form>
 <style>
 #mainText{
@@ -16,19 +18,25 @@
 </style>
 </body>
 <script>
-    
-
-window.addEventListener("beforeunload", function (e) {
-
-  (e || window.event).returnValue = null;
-
-});
+	enter2();
+	function enter2(){
+		if(localStorage.getItem("p2Name") != undefined){
+			document.getElementById("name").placeholder = localStorage.getItem("p2Name")
+	}
+}
+	function saveName(){
+		localStorage.setItem("p2Name", document.getElementById("name").value)
+		document.getElementById("name").value=""
+		enter2();
+	}
+	
 
 
 	function del(){
 	if(confirm("Are you sure you want to delete?")){
 		localStorage.removeItem("savedItem2")
 		localStorage.removeItem("exc2")
+		localStorage.removeItem("p2Name")
 		window.location.href="index.html"
 	}	
 	}
@@ -39,7 +47,6 @@ window.addEventListener("beforeunload", function (e) {
 	    	
 		if(localStorage.getItem("exc2") == undefined){
 			window.location.href="index.html"
-            
 		}
 		document.getElementById("mainText").value = localStorage.getItem("savedItem2")
 	}
