@@ -3,6 +3,7 @@
 <p id="p2" onclick="location.href='docs2.html'">Project 2</p>
 <p id="p3" onclick="location.href='docs3.html'">Project 3</p>
 <p id="p4" onclick="location.href='docs4.html'">Project 4</p>
+<p id="p5" onclick="location.href='docs5.html'">Project 5</p>
 <image src="addbtn.png" id="addbtn" onclick="add()">
 </image>
 
@@ -21,9 +22,16 @@
 	if(localStorage.getItem("p4Name") != undefined){
 	  document.getElementById("p4").innerHTML = localStorage.getItem("p4Name")
 	}
+	if(localStorage.getItem("p5Name") != undefined){
+	  document.getElementById("p5").innerHTML = localStorage.getItem("p5Name")
+	}
 }
 	ex();
     function ex(){
+	if(localStorage.getItem("exc5") == undefined){
+	var elem = document.getElementById("p5")
+	document.body.removeChild(elem)
+	}
     	if(localStorage.getItem("exc4") == undefined){
     		var elem = document.getElementById("p4")
     		document.body.removeChild(elem)
@@ -50,6 +58,10 @@
 	   else if(localStorage.getItem("exc4") == undefined){
 	   	localStorage.setItem("exc4","true")
 	   	window.location.href="docs4.html"
+	   }
+	   else if(localStorage.getItem("exc5") == undefined){
+	   localStorage.setItem("exc5", "true")
+           window.location.href="docs5.html"
 	   }
 	   else{
 	   	alert("Sorry! You have reached you max limit :(")
