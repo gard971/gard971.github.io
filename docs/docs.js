@@ -13,7 +13,7 @@ function load(form){
 	function enter2(){
 		if(localStorage.getItem("p1Name") != undefined){
 			document.getElementById("name").placeholder = localStorage.getItem("p1Name")
-			document.getElementById("T").innerHTML = localStorage.getElementById("p1Name")
+			document.getElementById("T").innerHTML = localStorage.getItem("p1Name")
 	}
 }
 	function saveName(){
