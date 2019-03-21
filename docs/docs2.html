@@ -1,5 +1,5 @@
 <body onload="enter(this.form)">
-
+	<title id="T">project2</title>
 <link rel="stylesheet" type="text/css" href="docs.css">
 <form>
 	<input id="name" type="text" placeholder="project2">
@@ -22,6 +22,7 @@
 	function enter2(){
 		if(localStorage.getItem("p2Name") != undefined){
 			document.getElementById("name").placeholder = localStorage.getItem("p2Name")
+			document.getElementById("T").innerHTML = localStorage.getItem("p2Name")
 	}
 }
 	function saveName(){
