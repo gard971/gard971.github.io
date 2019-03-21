@@ -21,6 +21,7 @@
 	function enter2(){
 		if(localStorage.getItem("p5Name") != undefined){
 			document.getElementById("name").placeholder = localStorage.getItem("p5Name")
+			document.getElementById("T").innerHTML = localStorage.getItem("p5Name")
 	}
 }
 	function saveName(){
