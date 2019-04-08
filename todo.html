@@ -1,0 +1,65 @@
+
+<container id="idk">
+<form  action="javascript:newItem()">
+
+	<p id="err"></p> 
+	<input type="text" id="newItem" name="newItem" placeholder="New item">
+	
+
+
+</form>
+<button onclick="deleteall()">Delete all items</button>
+	<br>
+	<br>
+	<hr>
+<ul id="ul">
+
+</ul>
+</container>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="todo.js"></script>
+
+<style type="text/css">
+	 label{
+	 	margin-top:-20%;
+	 }
+	 #err{
+	 	color:red;
+	 	position: absolute;
+	 	margin-left:40%;
+	 	margin-top:7%;
+	 	font-size: 200%;
+	 }
+
+     #idk{
+
+     }
+
+	#newItem{
+	
+		margin-top:10%;
+		margin-left:38%;
+		width:20%;
+		height:3%;
+	}
+	::placeholder{
+		text-align:center;
+	}
+	#ul{
+		
+		margin-top:5%;
+		margin-left:40%;
+		
+		list-style: none;
+
+		padding: 0%;
+		
+
+	}
+	li{
+		font-size: 200%;
+	}
+</style>
