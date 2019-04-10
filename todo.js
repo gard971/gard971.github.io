@@ -23,7 +23,8 @@ function newItem(){
 	var t = new Todo(document.getElementById("newItem").value)
 	items.push(t)
 	save();
-	console.log(items.name)
+   
+ 	console.log(items.name)
 	document.getElementById("newItem").value = ""	
 }
 else{
@@ -54,7 +55,7 @@ function list(name){
      var id = todo.id
      var name = todo.name; 
      var completed = todo.completed;
-     html += "<li onclick='completeItem("+id+")'>"+name+" "+completed+"</li>"
+     html += "<li id='item' onclick='completeItem("+id+")'><div id='name'>"+name+"</div><div id='completed'>"+completed+"</div></li>"
 	}
 
 	$("#ul").html(html);

@@ -1,6 +1,5 @@
 
 <container id="idk">
-	<title>Todo list</title>
 <form  action="javascript:newItem()">
 
 	<p id="err"></p> 
@@ -18,12 +17,42 @@
 </ul>
 </container>
 <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
+  src="http://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 <script src="todo.js"></script>
 
 <style type="text/css">
+	 
+    
+    #name{
+    	position: relative;
+    	right:65%;
+    }
+    #completed{
+      position: relative;
+      right:-60%;
+      top:-100%;
+
+    }
+
+
+
+
+    #item{
+    
+    	background-color:#989898;
+    	border-style:solid;
+    	border-color: black;
+    	border-width:1%;
+    	padding-left:40%;
+
+    	
+    }
+
+
+
+
 	 label{
 	 	margin-top:-20%;
 	 }
@@ -52,7 +81,7 @@
 	#ul{
 		
 		margin-top:5%;
-		margin-left:40%;
+		background-color:grey;
 		
 		list-style: none;
 
