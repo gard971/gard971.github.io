@@ -35,37 +35,37 @@ else if(form.mening.value == "NOR"){
    DEN(form);
 	}
 	else if(form.mening.value == "KAM")
-          alert("You can probably drink here anyways nobody will check it")
+           document.getElementById('return').innerHTML = "You can probably drink alcohol here anways. Nobody will check it"
 else{
-   alert("pls select country")
+   document.getElementById('return').innerHTML = "Please select a country"
 }
 }
 
 
 function USA(form){	
     if(form.age.value >=  "21"){
-    alert("you can drink alcohol")
+    document.getElementById('return').innerHTML = "You can drink alcohol"
 }
  else{
-    alert("You can not drink alcohol")
+   document.getElementById('return').innerHTML = "You can not drink alcohol"
  
  }
 }
 function NOR(form){	
    if(form.age.value >=  "18"){
-   alert("you can drink alcohol")
+    document.getElementById('return').innerHTML = "You can drink alcohol"
 }
  else{
-    alert("You can not drink alcohol")
+     document.getElementById('return').innerHTML = "You can not drink alcohol"
  
  }
 }
 	function DEN(form){	
    if(form.age.value >=  "16"){
-   alert("you can drink alcohol")
+    document.getElementById('return').innerHTML = "You can drink alcohol"
 }
  else{
-    alert("You can not drink alcohol")
+    document.getElementById('return').innerHTML = "You can not drink alcohol"
  
  }
 }
@@ -76,7 +76,7 @@ function NOR(form){
 
 </head>
 <body>
-
+<p id="return"></p>
 <form>
 	<select name="mening">
 		<option value="DSH"Disabled selected hidden>Please select country</option>
@@ -95,8 +95,13 @@ function NOR(form){
 </body>
 
 <style>
+#return{
+	margin-top:15%;
+	font-size:200%;
+}
+
 form{
-padding:200px;	
+margin-top:1%;
 	
 }
 head{
