@@ -1,0 +1,100 @@
+<a href="index.html">Go back home</a>
+<p id="creds">Made by Gard :)</p>
+<form id="main">
+    <input type="text" id="input"><br>
+    <input type="button" id="b" value="0" onclick="inputt(0)">
+    <input type="button" id="b" value="1" onclick="inputt(1)">
+    <input type="button" id="b" value="2" onclick="inputt(2)">
+    <input type="button" id="b" value="3" onclick="inputt(3)"><br>  
+    <input type="button" id="b" value="4" onclick="inputt(4)"> 
+    <input type="button" id="b" value="5" onclick="inputt(5)">
+    <input type="button" id="b" value="6" onclick="inputt(6)">
+    <input type="button" id="b" value="7" onclick="inputt(7)"><br>
+    <input type="button" id="b" value="8" onclick="inputt(8)">
+    <input type="button" id="b" value="9" onclick="inputt(9)">
+    <input type="button" id="b" value="+" onclick="meth('+')">
+    <input type="button" id="b" value="-" onclick="meth('-')"><br>
+    <input type="button" id="b" value="÷" onclick="meth('÷')">
+    <input type="button" id="b" value="*" onclick="meth('*')">
+    <input type="button" id="b" value="C" onclick="C()">
+    <input type="button" id="b" value="=" onclick="calc()">
+           
+ 
+</form>
+<script>
+  function C(){
+  document.getElementById("input").value = ""
+  sessionStorage.clear()
+  }
+ function inputt(val){
+var input = document.getElementById("input")
+input.value = input.value+val
+ }
+function meth(meth){
+var val1 = document.getElementById("input").value
+
+if(val1 == undefined || val1 == null){
+alert("Please input a value first")
+}
+else{
+sessionStorage.setItem("meth", meth)
+sessionStorage.setItem("val1", val1)
+document.getElementById("input").value = ""
+}
+}
+function calc(){
+var val2 = document.getElementById("input").value
+var val1 = sessionStorage.getItem("val1")
+if(val2 == undefined || val2 == null){
+    alert("please input a second value first")
+}
+else if(sessionStorage.getItem("meth") == "+"){
+document.getElementById("input").value = +val1 + +val2
+sessionStorage.clear()
+}
+else if(sessionStorage.getItem("meth") == "-"){
+document.getElementById("input").value = +val1 - +val2
+    sessionStorage.clear()
+}
+else if(sessionStorage.getItem("meth") == "÷"){
+document.getElementById("input").value = +val1 / +val2
+    sessionStorage.clear()
+}
+else if(sessionStorage.getItem("meth") == "*"){
+document.getElementById("input").value = +val1 * +val2
+    sessionStorage.clear()
+}
+}
+</script>
+<style>
+    a{
+    text-decoration:none;
+    color:white;
+    }
+    a:hover{
+    color:blue;
+    }
+    
+    
+    #creds{
+    color:white;
+    }
+    #b{
+    width:6%;
+    height:3%;
+    margin-right:.5%;
+    margin-bottom:.5%
+    }
+    
+    body{
+    background-color:black;
+    }
+    #main{
+    margin-top:17%;
+    margin-left:40%;
+    
+    }
+    #input{
+    width:27%;
+    }
+</style>
