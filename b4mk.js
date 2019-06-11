@@ -103,7 +103,7 @@ function enter2(){
         var hacker = localStorage.getItem("hack")
 	var boxCheck = document.getElementById("checkBox")
 	var plain_password = form.kuu.value
-	var encypted_password = MD5(plain_password)
+	var encrypted_password = MD5(plain_password)
     
 	
 	
