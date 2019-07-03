@@ -8,19 +8,9 @@ var pass = localStorage.getItem("password")
 		window.location.href="admin.html"
 		
 		}
-		
-		else{}
-	
-	
 	}
-
-
 }
 )();
-
-
-
-
 (function(){
 
 enter3();
@@ -35,29 +25,9 @@ else if(index2 == undefined){
 window.location.href="index.html"
 
 }
-
-
-
-
-
-
 }
-
-
-
 })();
-      
-      
-        
-        (function() {
-
-      
-
-		
-
-
-
-
+     (function() {
     enter(); 
 		function enter(){
     
@@ -66,25 +36,11 @@ window.location.href="index.html"
       localStorage.setItem("hack", "0")
     }
 
-        
-                
-		        
-
-
-		  
 			}
-
 			}
-		
-
 	)();
-
-
-
   (function(){
     var hacker = localStorage.getItem("hack")
-                   
-
 enter2();
 function enter2(){
 
