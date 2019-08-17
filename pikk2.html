@@ -1,0 +1,47 @@
+<img src="frame_00_delay-0.2s.jpg" onclick="newFrame()" id="pic">
+<img src="frame_10_delay-0.2s.jpg" id="cum">
+<img src="frame_05_delay-0.2s.jpg" id="boner" onclick="newFrame()">
+
+<style>
+	#cum{
+      position:absolute;
+     }
+     #boner{
+     	position:absolute;
+     }
+     #pic{
+      position:absolute;	
+     }
+
+</style>
+<script type="text/javascript">
+  var clicks = 0
+  document.getElementById("cum").style.visibility = "hidden"
+  document.getElementById("boner").style.visibility = "hidden"
+
+async function newFrame(){
+  if(clicks == 7){
+    clicks = 0
+    document.getElementById("boner").style.visibility = "hidden"
+    document.getElementById("cum").style.visibility = "visible"
+    await sleep(2000)
+    document.getElementById("cum").style.visibility = "hidden"
+    document.getElementById("pic").style.visibility = "visible"
+
+
+
+  }
+  else if(clicks == 3){
+    document.getElementById("pic").style.visibility = "hidden"
+    document.getElementById("boner").style.visibility = "visible"
+    clicks = clicks+1
+
+  }
+  else{
+    clicks = clicks+1
+  }
+  }
+  function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+</script>
