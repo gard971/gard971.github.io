@@ -8,6 +8,7 @@
 </image>
 
 <script>
+	var plus = localStorage.getItem("plusStatus")
 	enter();
 	function enter(){
 	if(localStorage.getItem("p1Name") != undefined){
@@ -55,16 +56,19 @@
 	   	localStorage.setItem("exc3", "true")
 	   	window.location.href="docs3.html"
 	   }
-	   else if(localStorage.getItem("exc4") == undefined){
+	   else if(localStorage.getItem("exc4") == undefined && plus == "true"){
 	   	localStorage.setItem("exc4","true")
 	   	window.location.href="docs4.html"
 	   }
-	   else if(localStorage.getItem("exc5") == undefined){
+	   else if(localStorage.getItem("exc5") == undefined && plus == "true"){
 	   localStorage.setItem("exc5", "true")
            window.location.href="docs5.html"
 	   }
+	   else if(plus != "true"){
+	   	alert("Sorry! You have reached your max limit, unlock docsPlus to get access to more documents")
+	   }
 	   else{
-	   	alert("Sorry! You have reached you max limit :(")
+	   	alert("Sorry, you have reached your max limit")
 	   }
 	}
 

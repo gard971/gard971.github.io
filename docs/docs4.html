@@ -18,6 +18,14 @@
 </style>
 </body>
 <script>
+var pluss = localStorage.getItem("plusStatus")
+	if(pluss != "true"){
+		alert("You do not have access to docsPlus, your document will now be deleted")
+		localStorage.removeItem("savedItem4")
+		localStorage.removeItem("exc4")
+		localStorage.removeItem("p4Name")
+		window.location.href="index.html"
+	}
 	enter2();
 	function enter2(){
 		if(localStorage.getItem("p4Name") != undefined){
