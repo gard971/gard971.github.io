@@ -1,0 +1,11 @@
+#mainText{
+	height: 98%;
+	width: 100%;
+	resize: none;
+}
+
+::placeholder{
+	text-align: center;
+	font-size: 140%;
+	color:black;
+}

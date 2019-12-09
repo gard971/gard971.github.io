@@ -1,0 +1,63 @@
+<body onload="enter()">
+	<title id="T">Project 4</title>
+<link rel="stylesheet" type="text/css" href="docs.css">
+<form>
+	<input id="name" type="text" placeholder="project4">
+<input value="Confirm New Name" type="button" onclick="saveName()">
+<textarea id="mainText" name="mainText"></textarea>
+<button  onclick="save(this.form)">save
+</button>
+<input type="button" onclick="del()" value="Delete Document">
+</form>
+<style>
+#mainText{
+	height: 98%;
+	width: 100%;
+	resize: none;
+}
+</style>
+</body>
+<script>
+var pluss = localStorage.getItem("plusStatus")
+	if(pluss != "true"){
+		alert("You do not have access to docsPlus, your document will now be deleted")
+		localStorage.removeItem("savedItem4")
+		localStorage.removeItem("exc4")
+		localStorage.removeItem("p4Name")
+		window.location.href="index.html"
+	}
+	enter2();
+	function enter2(){
+		if(localStorage.getItem("p4Name") != undefined){
+			document.getElementById("name").placeholder = localStorage.getItem("p4Name")
+			document.getElementById("T").innerHTML = localStorage.getItem("p4Name")
+	}
+}
+	function saveName(){
+		localStorage.setItem("p4Name", document.getElementById("name").value)
+		document.getElementById("name").value=""
+		enter2();
+	}
+	function del(){
+	if(confirm("Are you sure you want to delete?")){
+		localStorage.removeItem("savedItem4")
+		localStorage.removeItem("p4Name")
+		localStorage.removeItem("exc4")
+		window.location.href="index.html"
+	}	
+	}
+	   
+	enter();
+	function enter(form){
+		document.getElementById("mainText").value = localStorage.getItem("savedItem4")
+		if(localStorage.getItem("exc4") == undefined){
+			window.location.href="index.html"
+		}
+	}
+	function save(form){
+	localStorage.setItem("savedItem4", form.mainText.value)
+}
+function load(form){
+	form.mainText.value = localStorage.getItem("savedItem4")
+}
+</script>
