@@ -1,179 +1,208 @@
-<title>Docs</title>
-<p id="p1" onclick="location.href='docs.html'">Project 1</p>
-<p id="p2" onclick="location.href='docs2.html'">Project 2</p>
-<p id="p3" onclick="location.href='docs3.html'">Project 3</p>
-<p id="p4" onclick="location.href='docs4.html'">Project 4</p>
-<p id="p5" onclick="location.href='docs5.html'">Project 5</p>
-<image src="addbtn.png" id="addbtn" onclick="add()">
-</image>
+ 
+<script src="index.js"></script>
+<head>
+<title>Home</title>
+	
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-<script>
-	var plus = localStorage.getItem("plusStatus")
-	enter();
-	function enter(){
-	if(localStorage.getItem("p1Name") != undefined){
-	  document.getElementById("p1").innerHTML = localStorage.getItem("p1Name")
-	}
-	if(localStorage.getItem("p2Name") != undefined){
-	  document.getElementById("p2").innerHTML = localStorage.getItem("p2Name")
-	}
-	if(localStorage.getItem("p3Name") != undefined){
-	  document.getElementById("p3").innerHTML = localStorage.getItem("p3Name")
-	}
-	if(localStorage.getItem("p4Name") != undefined){
-	  document.getElementById("p4").innerHTML = localStorage.getItem("p4Name")
-	}
-	if(localStorage.getItem("p5Name") != undefined){
-	  document.getElementById("p5").innerHTML = localStorage.getItem("p5Name")
-	}
-}
-	ex();
-    function ex(){
-	if(localStorage.getItem("exc5") == undefined){
-	var elem = document.getElementById("p5")
-	document.body.removeChild(elem)
-	}
-    	if(localStorage.getItem("exc4") == undefined){
-    		var elem = document.getElementById("p4")
-    		document.body.removeChild(elem)
+  <ul>
+      <li onclick="pass()"><a href="pass.html" id="a1">Change Log   </a></li>
+      <li onclick="drink()"><a id="a2" href="canIdrink.html">Where Can You Drink?   </a></li>
+      <li onclick="john()"><a id="a3" href="John.html">John Wick Needs Your Help   </a></li>
+      <li onclick="vbuck()"><a id="a4" href="vbucks.html">GET FREE VBUCKS NOW!!   </a></li>
+	  <li onclick="kalkulator()"><a id="a4" href="kalkulator.html">Kalkulator</a></li>
+      <li onclick="docs()"><a id="a4" href="docs">Documents</a></li>
+	  <li onclick="tod()"><a id="a4" href="todo.html">Todo list</a></li>
+	    <li onclick="hash()"><a id="a4" href="hash.html">MD5 hashing tool</a></li>
+    </ul>
+    </head>
+    <body>
+    <div id="d1">
+        <h1>About</h1>
+        <p id="p1">Hello! My name is Gard and i am the developer of this website.<br>
+         I made this website and continue to develop it <br>just because i like programming. I run this project only on my freetime.</p>
+    </div>
+    <div id="d2">
+    	<h1>Contact</h1>
+    	<p id="p1">You can contact me at my email:<a id="Email" href="mailto:gardsoreng@gmail.com" target="_blank">Garsoreng@gmail.com</a>.<br> If you find any bugs or have any suggestions please contact me.</p>
+    </div>
+    <div id="d3">
+    	<h1>Code</h1>
+    	<p id="p1">If you are interested in the code you can find all the code for the different sites<a id="Email" href="https://github.com/gard971/gard971.github.io" target="_blank"> here</a> or by pressing CTRL+U on the individual sites</p>
 
-    	}
-    	if(localStorage.getItem("exc3") == undefined){
-    		var elem = document.getElementById("p3")
-    		document.body.removeChild(elem)
-    	}
-    	if(localStorage.getItem("exc2") == undefined){
-    		var elem = document.getElementById("p2")
-    		document.body.removeChild(elem)
-        }
+        </body>
+<script type="text/javascript">
+	function hash(){
+	window.location.href="hash.html"
+	}
+	function tod(){
+	window.location.href="todo.html"
+	}
+	
+	function docs(){
+    window.location.href="docs"
     }
-	function add(){
-	   if(localStorage.getItem("exc2") == undefined){
-	   	localStorage.setItem("exc2", "true")
-	   	window.location.href="docs2.html"
-	   }
-	   else if(localStorage.getItem("exc3") == undefined){
-	   	localStorage.setItem("exc3", "true")
-	   	window.location.href="docs3.html"
-	   }
-	   else if(localStorage.getItem("exc4") == undefined && plus == "true"){
-	   	localStorage.setItem("exc4","true")
-	   	window.location.href="docs4.html"
-	   }
-	   else if(localStorage.getItem("exc5") == undefined && plus == "true"){
-	   localStorage.setItem("exc5", "true")
-           window.location.href="docs5.html"
-	   }
-	   else if(plus != "true"){
-	   	alert("Sorry! You have reached your max limit, unlock docsPlus to get access to more documents")
-	   }
-	   else{
-	   	alert("Sorry, you have reached your max limit")
-	   }
+    
+    
+    function kalkulator(){
+	window.location.href="kalkulator.html"
+			      }
+	function pass(){
+		window.location.href="pass.html"
 	}
+	function drink(){
+		window.location.href="canIdrink.html"
+	}
+	function john() {
+		window.location.href="John.html"
+		// body...
+	}
+	function vbuck(){
+		window.location.href="vbucks.html"
+	}
+    
+    (function(){
+        mobile();
+        function mobile(){
+        if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) 
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)){
+window.location.href="mobile.index.html"
+            
+            
+            
+        }
+            else{
+   
+            }
+        
+    }
+    }
+        )();
 
 </script>
 
+    
+
 <style>
-	#p5:hover{
-   border-style:solid;
-   border-color:black;
-   border-width:1%;
-	}
+    
+    #au1{
+        position:fixed;
+    }
 	
-	#p5{
-	background-color:white;
-	padding-left:5%;
-	padding-right: 3%;
-	padding-top: 15%;
-	width:5%;
-        margin:0.1%;
-}
-p{
-   float:left;
-  
-}
+	
+	
+	a{
+      
+      text-decoration:none;
+      color:black;
+      position:relative;
+      top:80%;  
+      
+      
+      
+      
+      
+    }
+    
+    
+ 
+    body{
+    margin:0px;
+    background-size:200000px;
+    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/vfPFP3W/computer-coding-javascript-and-html-for-the-web-in-closeup-loop_b8vj5vu3_thumbnail-full01.png") no-repeat ;    
+    }
+    
+    ul{
+    list-style:none;
+    position:fixed;
+    float: left;
+    text-align:center;
+    width:100%; 
+    margin:0px;
+    padding:0%;
+    top:10%;
 
-#p1{
-	background-color:white;
-	padding-left:5%;
-	padding-right: 3%;
-	padding-top: 15%;
-	width:5%;
-}
-body{
-	background-color:grey;
-}
-#addbtn{
-	width:5%;
-}
-#addbtn:hover{
-	width:6%;
-}
+     
+   
+    }
+    li{
+    float:left;
+    border-style:solid;'
+    border-width:5px;
+    border-color:black;
+    background-color:white;
+    border-right:none;
+    border-left:none;
+    margin:none;
+    display:inline;
+    height:30px;
+    padding-bottom: 2%;
+	    width:12.5%;
+   
+    }
+    li:hover{
+    border-color:White;
+    }
+    
+    #d1{
+    position:absolute;
+    top:70%;
+    background-color:black;
+    padding-right:1%;
+    padding-bottom:5%;
+    border-style:solid;
+    border-color:yellow;
+    border-width:3%;
+    color:white;
+    text-align:center;
+    font-size:100%;
+    overflow:auto;    
 
-#p1:hover{
-   border-style:solid;
-   border-color:black;
-   border-width:1%;
-
-
-
-}
-#p1{
-	background-color:white;
-	padding-left:5%;
-	padding-right: 3%;
-	padding-top: 15%;
-	width:5%;
-	margin:0.1%;
-}
-#p2:hover{
-   border-style:solid;
-   border-color:black;
-   border-width:1%;
-
-
-
-}
-#p2{
-	background-color:white;
-	padding-left:5%;
-	padding-right: 3%;
-	padding-top: 15%;
-	width:5%;
-	margin:0.1%;
-}
-#p3:hover{
-   border-style:solid;
-   border-color:black;
-   border-width:1%;
-
-
-
-}
-#p3{
-	background-color:white;
-	padding-left:5%;
-	padding-right: 3%;
-	padding-top: 15%;
-	width:5%;
-	margin:0.1%;
-}
-#p4:hover{
-   border-style:solid;
-   border-color:black;
-   border-width:1%;
+    
+    }
+    
+    #p1{
+    	margin:5%;
 
 
+    }
 
-}
-#p4{
-	background-color:white;
-	padding-left:5%;
-	padding-right: 3%;
-	padding-top: 15%;
-	width:5%;
-	margin:0.1%;
-}
+    #Email{
 
+    	color:blue;
+    	position:relative;
+    	top:30%;
+    }
+
+    #d2{
+
+    	background-color:black;
+    	position:absolute;
+    	top:70%;
+    	left:40%;
+    	color:white;
+    	border-style: solid;
+    	border-width: 5px;
+    	border-color:yellow;
+    	text-align: center;
+    	padding-bottom: 7%;
+    	font-size: 100%;
+
+    }
+    #d3{
+    	text-align: center;
+    	position: absolute;
+    	top: 70%;
+    	left:70%;
+    	color:white;
+    	border-style: solid;
+    	border-width: 5px;
+    	border-color: yellow;
+    	background-color: black;
+    	padding-bottom: 7.1%;
+    	font-size: 100%;
+    }
 </style>
