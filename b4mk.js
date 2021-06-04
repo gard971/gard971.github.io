@@ -120,9 +120,7 @@ function enter2(){
 
        	}
 	       
-	else if(form.userid.value == "porn" && form.pswrd.value == "porn"){
-	alert("The porn site is curently down")
-	}
+
 
        
 
